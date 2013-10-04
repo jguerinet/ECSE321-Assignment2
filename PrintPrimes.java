@@ -39,7 +39,7 @@ public class PrintPrimes {
 		int primeNumberIndex = 2;
 		int square = 9;
 
-		for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
+		for (int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
 			do {
 				currentNumber = currentNumber + 2;
 				if (currentNumber == square) {
@@ -71,7 +71,7 @@ public class PrintPrimes {
                                " Prime Numbers --- Page " + pageNumber);
         	System.out.println("");
         	for (int rowOffset = pageOffset; rowOffset < pageOffset + numberOfRows; rowOffset++){
-        		for (int currentColumn = 0; currentColumn < numberOfColumns;currentColumn++)
+        		for (int currentColumn = 0; currentColumn < numberOfColumns; currentColumn++)
         			if (rowOffset + currentColumn * numberOfRows <= numberOfPrimes){
         				System.out.format("%10d", listOfPrimes[rowOffset + currentColumn * numberOfRows]);
         			}
