@@ -2,14 +2,14 @@ public class PrintPrimes {
   int numberOfPrimes;
   int numberOfRows;
   int numberOfColumns;
-  int ORDMAX;
+  int nonPrimeNumbersArraySize;
   int listOfPrimes[];
 
-  public PrintPrimes(int numberOfPrimes, int numberOfRows, int numberOfColumns, int ORDMAX) {
+  public PrintPrimes(int numberOfPrimes, int numberOfRows, int numberOfColumns, int nonPrimeNumbersArraySize) {
     this.numberOfPrimes   = numberOfPrimes;
     this.numberOfRows  = numberOfRows;
     this.numberOfColumns  = numberOfColumns;
-    this.ORDMAX = ORDMAX;
+    this.nonPrimeNumbersArraySize = nonPrimeNumbersArraySize;
     this.listOfPrimes = new int[numberOfPrimes + 1];
   }
 
@@ -32,7 +32,7 @@ public class PrintPrimes {
 
   private void calculateOddPrimes() {
       boolean isPrime;
-      int nonPrimeNumbers[] = new int[ORDMAX + 1];
+      int nonPrimeNumbers[] = new int[nonPrimeNumbersArraySize + 1];
 
       int currentNumber = 1;
       //This will keep the index of the prime number that is the square root of the next square we will encounter.
