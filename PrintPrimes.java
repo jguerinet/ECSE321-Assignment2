@@ -50,8 +50,9 @@ public class PrintPrimes {
 				int i = 2;
 				isPrime = true;
 				while (i < primeNumberIndex && isPrime) {
-					while (nonPrimeNumbers[i] < currentNumber)
+					while (nonPrimeNumbers[i] < currentNumber){
 						nonPrimeNumbers[i] = nonPrimeNumbers[i] + listOfPrimes[i] + listOfPrimes[i];
+					}
 					if (nonPrimeNumbers[i] == currentNumber){
 						isPrime = false;
 					}
