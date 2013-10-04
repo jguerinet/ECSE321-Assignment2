@@ -36,6 +36,7 @@ public class PrintPrimes {
 		calculateOddPrimes();
 	}
 
+	//This method will calculate all of the odd primes up until we have found the number of primes specified by the PrintPrimes object
 	private void calculateOddPrimes() {
 		boolean isPrime;
 		int nonPrimeNumbers[] = new int[nonPrimeNumbersArraySize + 1];
@@ -80,6 +81,7 @@ public class PrintPrimes {
 		}
 	}
 
+	//This method will print the primes that are stored in the listOfPrimes[] arraylist of the PrintPrimes object
 	public void printPrimes() {
         int pageNumber = 1;
         int pageOffset = 1;
