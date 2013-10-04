@@ -32,7 +32,7 @@ public class PrintPrimes {
 
   private void calculateOddPrimes() {
       boolean isPrime;
-      int MULT[] = new int[ORDMAX + 1];
+      int nonPrimeNumbers[] = new int[ORDMAX + 1];
 
       int currentNumber = 1;
       //This will keep the index of the prime number that is the square root of the next square we will encounter.
@@ -45,14 +45,14 @@ public class PrintPrimes {
           if (currentNumber == square) {
             primeNumberIndex = primeNumberIndex + 1;
             square = listOfPrimes[primeNumberIndex] * listOfPrimes[primeNumberIndex];
-            MULT[primeNumberIndex - 1] = currentNumber;
+            nonPrimeNumbers[primeNumberIndex - 1] = currentNumber;
           }
           int i = 2;
           isPrime = true;
           while (i < primeNumberIndex && isPrime) {
-            while (MULT[i] < currentNumber)
-              MULT[i] = MULT[i] + listOfPrimes[i] + listOfPrimes[i];
-            if (MULT[i] == currentNumber){
+            while (nonPrimeNumbers[i] < currentNumber)
+              nonPrimeNumbers[i] = nonPrimeNumbers[i] + listOfPrimes[i] + listOfPrimes[i];
+            if (nonPrimeNumbers[i] == currentNumber){
               isPrime = false;
 			}
             i = i + 1;
