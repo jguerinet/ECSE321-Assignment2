@@ -1,3 +1,8 @@
+/*
+ * Julien Guerinet
+ * ECSE 321 - Introduction to Software Engineering
+ * Assignment 2
+ */
 public class PrintPrimes {
 	//Number of Primes we are looking for
 	int numberOfPrimes;
