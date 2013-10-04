@@ -36,20 +36,21 @@ public class PrintPrimes {
       int MULT[] = new int[ORDMAX + 1];
 
       int currentNumber = 1;
-      int ORD = 2;
+      //This will keep the index of the prime number that is the square root of the next square we will encounter.
+      int primeNumberIndex = 2;
       int square = 9;
 
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
         do {
           currentNumber = currentNumber + 2;
           if (currentNumber == square) {
-            ORD = ORD + 1;
-            square = listOfPrimes[ORD] * listOfPrimes[ORD];
-            MULT[ORD - 1] = currentNumber;
+            primeNumberIndex = primeNumberIndex + 1;
+            square = listOfPrimes[primeNumberIndex] * listOfPrimes[primeNumberIndex];
+            MULT[primeNumberIndex - 1] = currentNumber;
           }
           N = 2;
           isPrime = true;
-          while (N < ORD && isPrime) {
+          while (N < primeNumberIndex && isPrime) {
             while (MULT[N] < currentNumber)
               MULT[N] = MULT[N] + listOfPrimes[N] + listOfPrimes[N];
             if (MULT[N] == currentNumber){
